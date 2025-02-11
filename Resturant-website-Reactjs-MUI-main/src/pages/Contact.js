@@ -1,0 +1,115 @@
+import React from "react";
+import Layout from "./../components/Layout/Layout";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import MailIcon from "@mui/icons-material/Mail";
+import CallIcon from "@mui/icons-material/Call";
+import backgroundImage  from "../images/background.png"; 
+import {
+  Box,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
+
+const Contact = () => {
+  return (
+    <Layout backgroundImage={backgroundImage}>
+      <Box sx={{
+    my: 10, // Reduced from 15 to 5
+    mt: 4, // Reduced top margin
+    mb: 3, // Reduce bottom margin to remove extra space
+    textAlign: "center",
+    p: 2,
+    "& h4": {
+      fontWeight: "bold",
+      my: 1, // Reduce margin around heading
+      fontSize: "2rem",
+    },
+    "& p": {
+      textAlign: "justify",
+      fontWeight: "bold",
+      color: "#5E0605",
+      mb: 1, // Reduce bottom margin of paragraphs
+    },
+    "@media (max-width:600px)": {
+      mt: 0,
+      "& h4 ": {
+        fontSize: "2rem",
+      },
+    },
+  }}
+>
+
+
+        <Typography variant="h4">Contact My Resturant</Typography><br></br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem odio
+          beatae ducimus magni nobis culpa praesentium velit expedita quae,
+          corrupti, pariatur inventore laboriosam consectetur modi impedit
+          error, repudiandae obcaecati doloribus.
+         
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem odio
+          beatae ducimus magni nobis culpa praesentium velit expedita quae,
+          corrupti, pariatur inventore laboriosam consectetur modi impedit
+          error, repudiandae obcaecati doloribus.
+         
+        </p>
+        
+      </Box>
+      <Box
+        sx={{
+          m: 3,
+          width: "600px",
+          ml: 10,
+          "@media (max-width:600px)": {
+            width: "300px",
+          },
+        }}
+      >
+       
+        <TableContainer component={Paper}>
+          <Table aria-label="contact table">
+            <TableHead>
+              <TableRow>
+                <TableCell
+                  sx={{ bgcolor: "#5E0605", color: "white" }}
+                  align="center"
+                >
+                  Contact Details
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>
+                  <SupportAgentIcon sx={{ color: "red", pt: 1 }} /> 1800-00-0000
+                  (tollfree)
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  <MailIcon sx={{ color: "skyblue", pt: 1 }} /> help@myrest.com
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  <CallIcon sx={{ color: "green", pt: 1 }} /> 1234567890
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      
+      </Box>
+    </Layout>
+  );
+};
+
+export default Contact;
